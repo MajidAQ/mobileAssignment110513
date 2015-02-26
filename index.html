@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Include meta tag to ensure proper rendering and touch zooming --> <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Include jQuery Mobile stylesheets --> <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">		
+		<!-- Include the jQuery library --> <script src = "jquery-1.11.2.min.js"></script>
+		<!-- Include the jQuery Mobile library --> <script src="jquery.mobile-1.4.5.min.js"></script>
+		<link rel="shortcut icon" href="../favicon.ico">
+		<title>NUCES Information App</title>
+		<style>
+				.movie-list thead th,
+				.movie-list tbody tr:last-child {
+				    border-bottom: 1px solid #d6d6d6; /* non-RGBA fallback */
+				    border-bottom: 1px solid rgba(0,0,0,.1);
+				}
+				.movie-list tbody th,
+				.movie-list tbody td {
+				    border-bottom: 1px solid #e6e6e6; /* non-RGBA fallback  */
+				    border-bottom: 1px solid rgba(0,0,0,.05);
+				}
+				.movie-list tbody tr:last-child th,
+				.movie-list tbody tr:last-child td {
+				    border-bottom: 0;
+				}
+				.movie-list tbody tr:nth-child(odd) td,
+				.movie-list tbody tr:nth-child(odd) th {
+				    background-color: #eeeeee; /* non-RGBA fallback  */
+				    background-color: rgba(0,0,0,.04);
+				}
+			</style>
+			
+	</head>
+	<body>
+		<div data-role="page" id="page">
+			<div data-role="header" > 
+				<div id="headwraper" align="center">
+					<img src="fastnu-logo.png" alt="Header" align="middle"  width="240" hspace="40"/>
+				</div>
+			</div>
+			<div data-role="content"> 
+				<ul data-role="listview">
+				<li><a href="#pageCampuses">Campuses</a></li>
+				<li><a href="#pageAdmission">Admission</a></li>
+				<li><a href="#pageDepartment">Department</a></li> </ul>
+			</div>
+			<div data-role="footer"> <h4>All right reserved</h4> </div>
+		</div>
+		
+		
+		
+		<div data-role="page" id="pageCampuses">
+			<div data-role="header">
+					<div id="headwraper" align="center">
+						<img src="fastnu-logo.png" alt="Header" align="middle"  width="240" hspace="40"/>
+					</div> 			
+					<a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+			</div>
+			<div data-role="content">
+			<h3 align="center" >Campuses</h3>
+				<ul data-role="listview">
+				<li><a href="#pageIslamabad">Islamabad</a></li>
+				<li><a href="#pageLahore">Lahore</a></li>
+				<li><a href="#pageKarachi">Karachi</a></li> 
+				<li><a href="#pagePeshawar">Peshawar</a></li>
+				</ul>
+			</div>
+			<div data-role="footer"> <h4>All right reserved</h4> </div>
+		</div>
+		
+		
+		
+		<div data-role="page" id="pageDepartment">
+			<div data-role="header">
+					<div id="headwraper" align="center">
+						<img src="fastnu-logo.png" alt="Header" align="middle"  width="240" hspace="40"/>
+					</div> 			
+					<a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+			</div>
+			<div data-role="content">
+			<h3 align="center" >Departments</h3>
+				<ul data-role="listview">
+				<li><a href="#pageCS">Computer Science</a></li>
+				<li><a href="#pageEE">Electrical Engineering</a></li>
+				<li><a href="#pageManagement">Management Sciences</a></li>
+				</ul>
+			</div>
+			<div data-role="footer"> <h4>All right reserved</h4> </div>
+		</div>
+		
+		
+		<div data-role="page" id="pageAdmission">
+			<div data-role="header">
+					<div id="headwraper" align="center">
+						<img src="fastnu-logo.png" alt="Header" align="middle"  width="240" hspace="40"/>
+					</div> 			
+					<a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+			</div>
+			<div data-role="content">
+			<h3 align="center" >Admissions</h3>
+				<table data-role="table" id="movie-table-custom" data-mode="reflow" class="movie-list ui-responsive">
+					<thead>
+						<tr>
+							<th data-priority="1"></th>
+							<th style="width:40%">BBA & BS</th>
+							<th data-priority="2">MBA, MS & PhD</th>
+							<th data-priority="3"><abbr title="PhD">PhD</abbr></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Application Submission</th>
+							<td class="title">Jun 9 - 28 (Mon-Sat)</td>
+							<td>Jun 9 - 28 (Mon-Sat)</td>
+							<td>Jan 31, 2015 (Sat)</td>
+						</tr>
+						<tr>
+							<th> Admission Tests</th>
+							<td class="title">Jul 1 - 7 (Tue-Mon)</td>
+							<td>Jul 1 - 7 (Tue-Mon)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th>Declaration of selected Candidates</th>
+							<td class="title">Jul 19 (Sat)</td>
+							<td>Jul 12 (Sat)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th> Interviews</th>
+							<td class="title"></td>
+							<td>Jul 15 - 17 (Tue-Thu)</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th>Admission Formalities</th>
+							<td class="title">Jul 21 - 24 (Mon-Thu)</td>
+							<td>Jul 28 - 30 (Mon-Wed)</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div data-role="footer"> <h4>All right reserved</h4> </div>
+		</div>
+		
+		
+		
+		
+		<div data-role="page" id="pageCS">
+			<div data-role="header">
+					<div id="headwraper" align="center">
+						<img src="fastnu-logo.png" alt="Header" align="middle"  width="240" hspace="40"/>
+					</div>
+					<a href="#pageDepartment" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>					
+					<a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+			</div>
+			<div data-role="content">
+			<h3 align="center" >Computer Science</h3>
+				<div data-role="collapsible">
+				<h4>BS</h4>
+				<p>
+					The purpose of Computer Science degree programs is to produce computer scientists, who can form the backbone of the rapidly growing computer industry.
+					The BS program is focused on developing an in depth understanding of both the theoretical and practical aspects of computer science through a rigorous course work spanning over a period of four years.
+					Students are given unique opportunities to go beyond traditional computer science and get themselves involved in research activities through various research and industrial collaboration programs carried out at the campuses.
+					This ensures a broad based educational foundation that prepares them for leadership roles along diverse career paths.
+				</p>
+				<p>
+					To equip students with modern trends in the ever changing field of computer science, courses are offered in concentration areas of Semantic Web, Multi-Agent Intelligent Systems, Networks, Data Mining and Data Warehousing, Software Engineering and Quality Assurance, Graphics and Game Programming, Image Processing, Soft Computing, Corporate and Business Computing, E-commerce etc.
+					Students select courses from these areas to match with their future career options in a broad range of industrial, corporate, multinational, governmental and non-governmental organizations.
+					Our course-ware is tailored according to the international standards to nurture capacity building and original thinking in our graduates for life-long-learning.
+					No doubt that our graduates are highly sought after by a majority of national and international IT industry.
+				</p>
+				</div>
+				
+				<div data-role="collapsible">
+				<h4>MS</h4>
+				<p>
+					The MS (Computer Science) comprises course work and research component.
+					It has four core courses aimed at strengthening the understanding and competence in computer science fundamentals.
+					The University expects its MS graduates to pursue careers either as Computer Science Faculty Member's or as Software Development Manager's in the industry.
+				</p>
+				</div>
+				
+			</div>
+			<div data-role="footer"> <h4>All right reserved</h4> </div>
+		</div>
+		
+		
+		
+		
+		<div data-role="page" id="pageEE">
+			<div data-role="header">
+					<div id="headwraper" align="center">
+						<img src="fastnu-logo.png" alt="Header" align="middle"  width="240" hspace="40"/>
+					</div>
+					<a href="#pageDepartment" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>					
+					<a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+			</div>
+			<div data-role="content">
+			<h3 align="center" >Electrical Engineering</h3>
+				<div data-role="collapsible">
+				<h4>BS</h4>
+				<p>
+					The Electrical Engineering degree is based on the HEC/PEC approved curriculum.
+					In the first year the students learn the fundamentals of Electrical Engineering supported by essential mathematics and physics courses.
+					These courses are followed by breadth courses which introduce students to different specialities in Electrical Engineering.
+					In the senior year students choose a specialization stream and study advanced courses.
+					Currently specializations are being offered in three areas, Telecommunication Engineering, and Computer Engineering.
+					In the highly competitive job market a young engineer is not only required to be knowledgeable in technical areas but is also expected to have excellent communication and managerial skills and an appreciation of modern day economics to design and implement a cost effective engineering solution.
+				</p>
+				</div>
+				
+				<div data-role="collapsible">
+				<h4>MS</h4>
+				<p>
+					This program prepares a graduate in Electrical Engineering to acquire expertise in a particular area.
+					In the final year, the student normally undertakes a thesis. This may be undertaken in collaboration with the industry, under the guidance of industry experts and a faculty supervisor from the University.
+					A student has the option to pursue MS by undertaking either a 6 credit hour MS Thesis or MS Project, spread over two regular semesters.
+					Typical course load in a semester is four courses.
+					However, NUCES staff cannot register for more than two courses in a semester.
+				</p>
+				</div>
+				
+			</div>
+			<div data-role="footer"> <h4>All right reserved</h4> </div>
+		</div>
+		
+		
+		<div data-role="page" id="pageManagement">
+			<div data-role="header">
+					<div id="headwraper" align="center">
+						<img src="fastnu-logo.png" alt="Header" align="middle"  width="240" hspace="40"/>
+					</div>
+					<a href="#pageDepartment" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>					
+					<a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+			</div>
+			<div data-role="content">
+			<h3 align="center" >Management Sciences</h3>
+				<div data-role="collapsible">
+				<h4>BS</h4>
+				<p>
+					Change is the only constant known today to the business world which has to grapple with the challenging realities of an increasingly global and complex marketplace.
+					The Bachelor of Business Administration (BBA) program at FAST attempts to bring out dynamic managers and administrators, well-equipped to meet the challenges posed by this highly competitive global marketplace.
+					To this end, the approach in the classroom is tailored to inculcate an appreciation for both the quantitative and qualitative dimensions of business.
+				</p>
+				</div>
+				
+				<div data-role="collapsible">
+				<h4>MS</h4>
+				<p>
+					This 2-year Master of Business Administration (MBA) program focuses on strategic, specialized and advanced courses across the functional areas of business.
+					Additionally, this intellectually-stimulating program is designed with a view to 'researching' local & regional management phenomena rather than merely 'studying' them.
+					Students are taught decision-making skills through qualitative and quantitative analysis and are expected to offer vibrancy to the corporate culture.
+				</p>
+				</div>
+				
+			</div>
+			<div data-role="footer"> <h4>All right reserved</h4> </div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<div data-role="page" id="pageIslamabad">
+			<div data-role="header">
+							
+				<div id="headwraper" align="center">
+						<img src="fastnu-logo.png" alt="Header" align="middle"  width="240" hspace="40"/>
+					</div> 
+					<a href="#pageCampuses" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+					<a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+					
+			    <style>
+				  #map-canvas {
+					width: 100%;
+					height: 400px;
+					text-align: middle;
+					
+				}
+				</style>
+				<script src="https://maps.googleapis.com/maps/api/js"></script>
+				<script>
+				  function initialize() {
+					var mapCanvas = document.getElementById('map-canvas');
+					var mapOptions = {
+					  center: new google.maps.LatLng(33.656392,73.016544),
+					  zoom: 16,
+					  mapTypeId: google.maps.MapTypeId.ROADMAP
+					}
+					var map = new google.maps.Map(mapCanvas, mapOptions)
+				  }
+				  google.maps.event.addDomListener(window, 'load', initialize);
+				</script>
+			</div>
+			<div data-role="content">
+			<h3 align="center" >Islamabad Campus Location</h3>
+				<div id="map-canvas" align="center"></div>
+			</div>
+			<div data-role="footer"> <h4>All right reserved</h4> </div>
+		</div>
+		
+		<div data-role="page" id="pageLahore">
+			<div data-role="header">
+							
+				<div id="headwraper" align="center">
+						<img src="fastnu-logo.png" alt="Header" align="middle"  width="240" hspace="40"/>
+					</div> 			
+					<a href="#pageCampuses" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+					<a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+					
+			    <style>
+				  #map-canvas2 {
+					width: 100%;
+					height: 400px;
+					text-align: middle;
+					
+				}
+				</style>
+				<script src="https://maps.googleapis.com/maps/api/js"></script>
+				<script>
+				  function initialize() {
+					var mapCanvas = document.getElementById('map-canvas2');
+					var mapOptions = {
+					  center: new google.maps.LatLng(31.481093,74.303388),
+					  zoom: 16,
+					  mapTypeId: google.maps.MapTypeId.ROADMAP
+					}
+					var map = new google.maps.Map(mapCanvas, mapOptions)
+				  }
+				  google.maps.event.addDomListener(window, 'load', initialize);
+				</script>
+			</div>
+			<div data-role="content">
+			<h3 align="center" >Lahore Campus Location</h3>
+				<div id="map-canvas2" align="center"></div>
+			</div>
+			<div data-role="footer"> <h4>All right reserved</h4> </div>
+		</div>
+		
+		<div data-role="page" id="pagePeshawar">
+			<div data-role="header">
+							
+				<div id="headwraper" align="center">
+						<img src="fastnu-logo.png" alt="Header" align="middle"  width="240" hspace="40"/>
+					</div> 			
+					<a href="#pageCampuses" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+					<a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+					
+			    <style>
+				  #map-canvas3 {
+					width: 100%;
+					height: 400px;
+					text-align: middle;
+					
+				}
+				</style>
+				<script src="https://maps.googleapis.com/maps/api/js"></script>
+				<script>
+				  function initialize() {
+					var mapCanvas = document.getElementById('map-canvas3');
+					var mapOptions = {
+					  center: new google.maps.LatLng(33.980465,71.427183),
+					  zoom: 16,
+					  mapTypeId: google.maps.MapTypeId.ROADMAP
+					}
+					var map = new google.maps.Map(mapCanvas, mapOptions)
+				  }
+				  google.maps.event.addDomListener(window, 'load', initialize);
+				</script>
+			</div>
+			<div data-role="content">
+			<h3 align="center" >Pesahwar Campus Location</h3>
+				<div id="map-canvas3" align="center"></div>
+			</div>
+			<div data-role="footer"> <h4>All right reserved</h4> </div>
+		</div>
+		
+		<div data-role="page" id="pageKarachi">
+			<div data-role="header">
+							
+				<div id="headwraper" align="center">
+						<img src="fastnu-logo.png" alt="Header" align="middle"  width="240" hspace="40"/>
+					</div> 			
+					<a href="#pageCampuses" class="ui-btn ui-icon-back ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+					<a href="#page" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-icon-notext ui-corner-all" ></a>
+					
+			    <style>
+				  #map-canvas4 {
+					width: 100%;
+					height: 400px;
+					text-align: middle;
+					
+				}
+				</style>
+				<script src="https://maps.googleapis.com/maps/api/js"></script>
+				<script>
+				  function initialize() {
+					var mapCanvas = document.getElementById('map-canvas4');
+					var mapOptions = {
+					  center: new google.maps.LatLng(24.859856,67.069939),
+					  zoom: 16,
+					  mapTypeId: google.maps.MapTypeId.ROADMAP
+					}
+					var map = new google.maps.Map(mapCanvas, mapOptions)
+				  }
+				  google.maps.event.addDomListener(window, 'load', initialize);
+				</script>
+			</div>
+			<div data-role="content">
+			<h3 align="center" >Karachi Campus Location</h3>
+				<div id="map-canvas4" align="center"></div>
+			</div>
+			<div data-role="footer"> <h4>All right reserved</h4> </div>
+		</div>
+		
+		
+	</body>
+</html>
